@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-
-
+const apiUrl = import.meta.env.VITE_API_BASE_URL;
 
 
 const AddBudget = ({ onSubmit }) => {
@@ -28,7 +27,7 @@ const AddBudget = ({ onSubmit }) => {
 
         console.log(newBudget);
         try {
-            const response = await fetch('http://localhost:3000/budget', {
+            const response = await fetch(`${apiUrl}/budget`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

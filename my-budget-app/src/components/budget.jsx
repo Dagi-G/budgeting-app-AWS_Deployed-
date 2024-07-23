@@ -5,6 +5,8 @@ import moment from 'moment';
 import AddBudget from './addBudget';
 import '../budget.css';
 
+
+const apiUrl = import.meta.env.VITE_API_BASE_URL;
 const Budget = () => {
  
     const [budgetData, setBudgetData] = useState([]);
@@ -20,7 +22,7 @@ const Budget = () => {
                 console.log("Asked for this budget month ", budgetMonth);
                 if (budgetData) {
                     
-                    const response = await fetch(`http://localhost:3000/budget/${budgetMonth}`);
+                    const response = await fetch(`${apiUrl}/budget/${budgetMonth}`);
                     if (!response.ok) {
                         throw new Error('Data could not be fetched!');
                     }
@@ -44,7 +46,7 @@ const Budget = () => {
     const handleDelete = async (id) => {
         console.log('Delete', {id});
         try {
-            const response = await fetch(`http://localhost:3000/budget/${id}`, {
+            const response = await fetch(`${apiUrl}/budget/${id}`, {
                 method: 'DELETE',
                 headers: {
                     'Content-Type': 'application/json',
