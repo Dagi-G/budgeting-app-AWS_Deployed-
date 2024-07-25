@@ -15,11 +15,16 @@ jobs:
         uses: actions/setup-node@v3  # Updated to v3
         with:
           node-version: '18'  # Specify a supported Node.js version
-
-      - name: Install dependencies and build
+      - name: Install dependencies
         working-directory: my-budget-app
         run: |
-          npm install
+          npm install    
+      - name: Inject environment variables
+        run: echo "REACT_APP_API_URL=http://3.22.108.136:3000/" >> my-budget-app/.env    
+
+      - name: Build the react app
+        working-directory: my-budget-app
+        run: |
           npm run build
 
       - name: Configure AWS credentials
