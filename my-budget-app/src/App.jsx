@@ -10,6 +10,8 @@ import Budget from './components/budget.jsx';
 import Home from './components/Home.jsx';
 import moment from 'moment';
 import AddBudget from './components/addBudget.jsx';
+import Income from './components/Income.jsx';
+import logo from './../public/budget-app.svg';
 
 function App() {
   const NextMonth = moment().add(1,'months').format('MMMM');
@@ -23,7 +25,7 @@ function App() {
     <Router>
       <nav className="navbar navbar-expand-lg bg-body-tertiary">
         <div className="container-fluid">
-          <a className="navbar-brand" href="#">MY APP</a>
+          <img src = {logo} style={{ height: '80px', width: 'auto' }} />
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
           </button>
@@ -35,7 +37,11 @@ function App() {
               </li>
 
               <li className="nav-item">
-                <Link className="nav-link" to='loans'>Loans</Link>
+                <Link className="nav-link" to='loans'>Debts</Link>
+              </li>
+
+              <li className="nav-item">
+                <Link className="nav-link" to='income'>Income</Link>
               </li>
 
               <li>
@@ -83,6 +89,7 @@ function App() {
       <Routes>
         <Route path="loans" Component={Loans} />
         <Route path="budget" Component={Budget} />
+        <Route path="income" Component={Income} />
         <Route path="home" Component={Home} />
         <Route path="addBudget" Component={AddBudget} />
       </Routes>
