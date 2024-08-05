@@ -12,6 +12,10 @@ const Home = () => {
       </ul>
       <p>To check it out, simply head to the <strong>Budget</strong> tab in the navigation menu. Start making the most of your budget today! 💰💡</p>
       <p>If you have any feedback or need help, feel free to reach out. We’re always here to assist! 🤝</p>
+
+    <div>
+      <h1>Home Page</h1>
+      <p>This is the home page. Welcome!</p>
     </div>
   );
 };
