@@ -5,7 +5,6 @@ import profileImage from '/Dagi_Girma.jpg';
 
 const Home = () => {
   return (
-    
     <>
       <Container fluid className="p-4">
         <div className="bg-primary text-white text-center rounded-lg p-5 mb-4">
@@ -109,6 +108,7 @@ const Home = () => {
         </footer>
       </Container>
     </>
+
   );
 };
 
