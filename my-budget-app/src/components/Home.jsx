@@ -4,7 +4,6 @@ import profileImage from '/Dagi_Girma.jpg';
 
 
 const Home = () => {
-  
   return (
     
     <>
