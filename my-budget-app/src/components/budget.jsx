@@ -34,7 +34,7 @@ const Budget = () => {
                 }
             }
             catch (error) {
-                console.error('Error fetching socks:', error);
+                console.error('Error fetching budget data:', error);
             }
         };
 

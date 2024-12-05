@@ -8,7 +8,7 @@ import 'bootstrap/dist/js/bootstrap.bundle'
 import Loans from './components/Loans';
 import Budget from './components/budget.jsx';
 import Home from './components/Home.jsx';
-import moment from 'moment';
+import moment from 'moment';    
 import AddBudget from './components/addBudget.jsx';
 import Income from './components/Income.jsx';
 import logo from './../public/budget-app.svg';
