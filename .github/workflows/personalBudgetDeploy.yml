@@ -1,4 +1,4 @@
-name: Deploy to AWS S3(SANDBOX)
+name: Deploy to AWS S3(Personal Site)
 
 on:
   workflow_dispatch:
